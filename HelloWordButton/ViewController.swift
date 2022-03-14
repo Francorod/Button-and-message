@@ -7,13 +7,20 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
-    override func viewDidLoad() {
+class MainViewController: UIViewController
+{
+    @IBOutlet weak var textLabel:UILabel?
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        textLabel?.text = "Message to You!"
     }
-
-
+    
+    @IBAction func onButtonTap(sender: UIButton)
+    {
+        textLabel?.text = "Hello world!"
+    }
 }
 
